@@ -299,7 +299,7 @@ const LendBorrow = (props) => {
 			</div>
 
 			<div className="balance-container">
-				<div>
+				<div className="balance-data">
 					<h3>Current Contract Balance : </h3>
 					<p>
 						{contractBalance !== null
@@ -308,7 +308,7 @@ const LendBorrow = (props) => {
 					</p>
 				</div>
 
-				<div>
+				<div className="balance-data">
 					<h3>Borrowed Total: </h3>
 					<p>
 						{borrowedTotal !== null
