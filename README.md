@@ -6,9 +6,9 @@ Use These Command for installing React, Hardhat and Ethers,
 make sure to `cd .\app-name` before installing Hardhat
 
 ```js
-npm create-react-app app-name
-npm install --save-dev hardhat
-npm install ethers
+  npm create-react-app app-name
+  npm install --save-dev hardhat
+  npm install ethers
 ```
 
 Use `npx hardhat compile` to compile the smart contract
@@ -16,8 +16,8 @@ Use `npx hardhat compile` to compile the smart contract
 To deploy the contract, first start the Hardhat local test node and then run the `deploy.js` script using below commands
 
 ```js
-    npx hardhat node
-    npx hardhat run scripts/deploy.js --network localhost
+  npx hardhat node
+  npx hardhat run scripts/deploy.js --network localhost
 ```
 
 After deploying the contract make sure to check the output contract address and cotract address in App.js file are same.
@@ -27,7 +27,7 @@ Connect any of the local Hardhat account to Metamask by setting Hardhat local ne
 To test the dApp, start the React server:
 
 ```js
-    npm start
+  npm start
 ```
 
 ## Technoligies and Framework used
