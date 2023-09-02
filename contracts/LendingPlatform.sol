@@ -2,9 +2,9 @@
 pragma solidity ^0.8.19;
 
 contract LendingPlatform {
-    // Annual interest rate for borrowers in basis points (1 basis point = 0.01%)
+    // Annual interest rate for borrowers
     uint256 public borrowerInterestRate;
-    // Annual interest rate for lenders in basis points
+    // Annual interest rate for lenders
     uint256 public lenderInterestRate;
     // total borrowed amount
     uint256 public borrowedTotal;
