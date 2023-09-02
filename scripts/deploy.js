@@ -9,16 +9,9 @@ async function main() {
 		await deployer.address
 	);
 
-	// Set the interest rate and collateral ratio
-	const interestRate = 5;
-	const collateralRatio = 80;
-
 	// Deploy the LendingPlatform contract
 	const LendingPlatform = await ethers.getContractFactory("LendingPlatform");
-	const lendingPlatform = await LendingPlatform.deploy(
-		interestRate,
-		collateralRatio
-	);
+	const lendingPlatform = await LendingPlatform.deploy();
 
 	// Wait for the contract to be deployed
 	await lendingPlatform.waitForDeployment();

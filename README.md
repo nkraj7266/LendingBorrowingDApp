@@ -1,8 +1,9 @@
-# Steps to run DApp on local server
+# Basic Lending and Borrowing dApp
 
-## Use These Command for React, Hardhat and Ethers
+## Steps to run dApp on local server
 
-Make sure to `cd .\app-name` before installing Hardhat
+Use These Command for installing React, Hardhat and Ethers,
+make sure to `cd .\app-name` before installing Hardhat
 
 ```js
 npm create-react-app app-name
@@ -10,45 +11,35 @@ npm install --save-dev hardhat
 npm install ethers
 ```
 
-### Run this command to create Hardhat Project
+Use `npx hardhat compile` to compile the smart contract
 
-Run below command and choose Create an empty hardhat.config.js
-
-```js
-npx hardhat
-```
-
-Add Below Lines in `hardhat.config.js`
-
-```js
-    require("@nomicfoundation/hardhat-toolbox");
-
-    module.exports = {
-        solidity: "0.8.19",
-        paths: {
-            artifacts: './src/artifacts',
-        },
-        networks: {
-            hardhat: {
-            chainId: 31337
-            }
-        }
-    };
-```
-
-`npx hardhat compile` Use to compile the smart contract
-
-To deploy to the local network, first start the local test node and then run the deploy script
+To deploy the contract, first start the Hardhat local test node and then run the `deploy.js` script using below commands
 
 ```js
     npx hardhat node
     npx hardhat run scripts/deploy.js --network localhost
 ```
 
-Connect any Virtual Hardhat account to Metamask by setting Hardhat local network in it
+After deploying the contract make sure to check the output contract address and cotract address in App.js file are same.
 
-To test the DApp, start the React server:
+Connect any of the local Hardhat account to Metamask by setting Hardhat local network `http://127.0.0.1:8545/` on it.
+
+To test the dApp, start the React server:
 
 ```js
     npm start
 ```
+
+## Technoligies and Framework used
+
+- React.js
+- Hardhat
+  - `A development environment for the Ethereum blockchain that    enables developers to easily compile, edit, debug, and deploy Smart Contracts and dApps.`
+- Ethers.js
+  - `Ethers.js is a complete and compact library for interacting with the Ethereum Blockchain and its ecosystem.`
+
+## Explanation of the design choices made
+
+- Used **React.js** for frontend design.
+- Used **Hardhat** beacuse it helps in testing, compiling, deploying, and debugging dApps on the Ethereum blockchain.
+- Used **Ethers.js** for interacting with the smart contract beacuse it is particularly useful for applications that require sending transactions and querying data from the Blockchain.
