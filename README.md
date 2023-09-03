@@ -32,11 +32,12 @@ To test the dApp, start the React server:
 
 ## Technoligies and Framework used
 
-- React.js
+- Solidity
 - Hardhat
-  - `A development environment for the Ethereum blockchain that    enables developers to easily compile, edit, debug, and deploy Smart Contracts and dApps.`
+  - `A development environment for the Ethereum blockchain that enables developers to easily compile, edit, debug, and deploy Smart Contracts and dApps.`
 - Ethers.js
   - `Ethers.js is a complete and compact library for interacting with the Ethereum Blockchain and its ecosystem.`
+- React.js
 
 ## Explanation of the design choices made
 
